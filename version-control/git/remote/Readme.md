@@ -28,7 +28,11 @@ etc.) provides :
 
 **NOTE** Public repos have public licences **by default**. If you don't
 want to share (in the most liberal sense) your stuff with the world, pay
-github money for private repos, or host your own.
+github money for private repos, or host your own. If you have an academic
+affiliation you can get a *student account*, by going to
+github's [edu page](https://github.com/edu). You can get a free *micro*
+account, which allows you to maintain a few *private* repos, that are not
+shared with the world.
 
 ## github pasword 
 
