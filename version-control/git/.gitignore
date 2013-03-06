@@ -7,3 +7,6 @@ reveal
 
 # slide builds
 *.html
+
+# Fernando's test directory
+test/
