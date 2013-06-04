@@ -12,8 +12,8 @@ Preliminary schedule:
 
 ###Day 1 - 1st July 2013
 
-**9:00 -  9:30**  Setup Help  
-**9:30 - 10:00** Introduction  
+**09:00 -  09:30**  Setup Help  
+**09:30 - 10:00** Introduction  
 **10:00 - 11:00** Unix Shell (Paul?)  
 **11:00 - 11:15** Break  
 **11:15 - 12:00** Unix Shell - continued (Paul?)   
@@ -24,7 +24,7 @@ Preliminary schedule:
 
 ###Day 2 - 2nd July 2013
 
-**9:00 - 11:00**  Scientific computing in Python / Programming with Python (Paul)  
+**09:00 - 11:00**  Scientific computing in Python / Programming with Python (Paul)  
 **11:00 - 11:15** Break  
 **11:15 - 12:30** Software testing (Aleksandra)  
 **12:30 - 13:30** Lunch  
