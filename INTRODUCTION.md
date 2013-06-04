@@ -3,9 +3,7 @@
 ## First of all: thanks! 
 
 ### For funding and organization support: 
-- To the [CNI](http://cni.stanford.edu/). Bob Dougherty
-
-- To the [neuroscience grad program](http://biosciences.stanford.edu/neurosciences.html). Miriam Goodman, John Huguenard, Ross Colvin and Katie Johnson.
+The University of Oklahoma
 
 ### For organizational and instructional support:
 - To [Software Carpentry](http://software-carpentry.org/)
@@ -13,16 +11,13 @@
 ### The instructors and helpers: 
 
 **Instructors**
-- Bernhard Konrad
 - [Paul Ivanov](http://pirsquared.org/)
-- [Ariel Rokem](http://arokem.org)
+- Aleksandra Pawlik
 
 **Helpers**
 
 What are helpers for? Well, they're here to *help*!
 
-- [Jayanth Raman](https://www.linkedin.com/in/jayanthraman)
-- Michael Waskom
 
 ## Why are we here?
 
@@ -30,15 +25,14 @@ What are helpers for? Well, they're here to *help*!
 - Don't let your computer do what you could do better.
 - But don't bother doing all the things your computer should be doing!
 
-## [The schedule](http://arokem.github.io/boot-camps/2013-05-06-stanford/#schedule)
+## [The schedule](https://github.com/ivanov/boot-camps/blob/2013-07-OU/README.md)
 
 ### In numbers:
 - 3-4 hands-on sessions per day
 - 2 coffee breaks/day
 
 Coffee breaks will be useful for asking questions and making comments
-In particular, please use [this etherpad](https://etherpad.mozilla.org/m4Um2MFlCN)
-to make comments and ask questions as we go along.
+In particular, please use [this etherpad](https://etherpad.mozilla.org/swc-ou) to make comments and ask questions as we go along.
 
 We will have structured moments throughout the day to go over these questions
 - 1 lunch break/day
@@ -74,6 +68,6 @@ Does everyone have everything they need installed?
     $cd ~/Documents
 
 - And get this repository, by running this command (we will explain this command later this afternoon):
-	git clone https://github.com/arokem/boot-camps.git --branch 2013-05-06-stanford --single-branch SWC
+	git clone https://github.com/ivanov/boot-camps.git --branch 2013-07-OU --single-branch SWC
 
 - Now change your working directory to the `SWC` directory. The files that we will be using in the workshop (+much more!) should now be in there.
