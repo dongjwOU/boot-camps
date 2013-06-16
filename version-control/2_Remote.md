@@ -223,7 +223,7 @@ This is where version control proves itself better than DropBox or GoogleDrive, 
 
 To push that branch to the remote repository:
 
-   $ git push origin feature2
+    $ git push origin feature2
 
 To list all branches (local and remote):
 
