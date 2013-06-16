@@ -5,7 +5,6 @@ Version control is centred round the notion of a *repository* which holds your d
 ### Create a new repository with Git
 
 First, create a directory:
-
     $ mkdir add_nums
     $ cd add_nums
 
