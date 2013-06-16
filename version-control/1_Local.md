@@ -26,7 +26,7 @@ If we look in this directory, we'll find a `.git` directory:
 
 ### Tell Git who we are
 
-As part of the information about changes made to files Git records who made those changes. In teamwork this information is often crucial (do you want to know who rewrote your 'Conclusions' section?). So, we need to tell Git about who we are,
+As part of the information about changes made to files Git records who made those changes. In teamwork this information is often crucial (do you want to know who rewrote your 'Conclusions' section?). So, we need to tell Git about who we are:  
 
     $ git config --global user.name "Your Name"
     $ git config --global user.email "yourname@yourplace.org"
@@ -53,10 +53,10 @@ We can now preview (and edit, if necessary) Git's global configuration (such as 
 
     $ cat ~/.gitconfig
     [user]
-  name = Your Name
-	email = yourname@yourplace.org
+        name = Your Name
+       	email = yourname@yourplace.org
     [core]
-	editor = nano
+     	editor = nano
 
 This file holds global configuration that is applied to any Git repository in your file system.
 
@@ -66,16 +66,15 @@ Now, we'll create a file. Let's say we're going to write a simple Python program
 
     $ nano add_numb.py
 
-We add the code:
-   def add_two(a,b):
-      return a+b
+We add the code:  
 
-   def main():
+    def add_two(a,b):
+       return a+b
+    def main():
        print ("2 + 3 = ",add_two(2,3))
-
     if __name__ == "__main__":
-       main()
-
+         main()
+ 
 `git status` allows us to find out about the current status of files in the repository. So, we can run,
 
     $ git status add_numb.py
@@ -340,6 +339,7 @@ We'll change our program creating a module containing two fuctions 'add_two' and
     Switched to a new branch 'feature1'
 
 Let's now create a module and write a function which adds three numbers. The module will be called 'adding.py' and the code is:
+
     def add_three(a,b,c):
         return a+b+c
 
@@ -347,38 +347,39 @@ Now, let's modify our add_numb.py file:
     """ This short program just adds numbers. """
 
     from adding import add_three
-
     def add_two(a,b):
         return a+b
-
     def main():
         print ("2 + 3 = ",add_two(2,3))
         print ("2 + 3 + 4 = ",add_three(2,3,4))
-
     if __name__ == "__main__":
         main()
 
 
 Let's commit our changes. Before we do that, it's a good practice to check whether we're working in the correct branch.
 
-   $ git branch
-   * feature1
-     master
+    $ git branch
+    * feature1
+      master
 
 The * indicates which branch we're currently in. Let's commit. If we want to work now in our master branch. We can switch by using:
-    $ git checkout master
+
+    $ git checkout master 
     Switched to branch 'master'
 
-The module which we added in our feature branch is not in our master
+The module which we added in our feature branch is not in our master:
+
     $ ls
     add_numb.py doc
 
 To list all (local) branches:
+
     $ git branch
     feature1
     * master
 
 Git is very powerful and comes with countless number of commands. For example, if you want to see all branches with their commits use:
+
     $ git show-branch
     * [feature1] Moved add_two to the module
     ! [master] Added files
