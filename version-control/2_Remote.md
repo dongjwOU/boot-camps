@@ -48,7 +48,7 @@ Now copy and paste the second line,
     Compressing objects: 100% (30/30), done.
     Writing objects: 100% (38/38), 3.59 KiB, done.
     Total 38 (delta 9), reused 0 (delta 0)
-    To https://github.com/USERNAME/bootcamp-WiSE.git
+    To https://github.com/USERNAME/bootcamp.git
     * [new branch]      master -> master
     Branch master set up to track remote branch master from origin.
 
@@ -68,8 +68,8 @@ Now, let's do something drastic!
 
 Gulp! We've just wiped our local repository! But, as we've a copy on GitHub we can just copy, or *clone* that,
 
-    $ git clone https://github.com/USERNAME/bootcamp-WiSE.git
-    Cloning into 'bootcamp-WiSE'...
+    $ git clone https://github.com/USERNAME/bootcamp.git
+    Cloning into 'bootcamp'...
     Password for 'https://USERNAME@GitHub.com':
     remote: Counting objects: 38, done.
     remote: Compressing objects: 100% (21/21), done.
@@ -78,9 +78,9 @@ Gulp! We've just wiped our local repository! But, as we've a copy on GitHub we c
 
 In GitHub, there is also an option for called *forking* which essentially allows to do the same thing but forking is done in the web service (that is not using the command line and creating a repository on your local file system).
 
-Now, if we change into `bootcamp-WiSE` we can see that we have our repository,
+Now, if we change into `bootcamp` we can see that we have our repository,
 
-    $ cd bootcamp-WiSE
+    $ cd bootcamp
     $ git log
 
 and we can see our Git configuration files too,
@@ -112,11 +112,11 @@ First, let us leave our current local repository,
 
     $ cd ..
     $ ls
-    bootcamp-WiSE
+    bootcamp
 
 And let us clone our repository again, but this time specify the local directory name,
 
-    $ git clone https://github.com/USERNAME/bootcamp-WiSE.git bootcamp2
+    $ git clone https://github.com/USERNAME/bootcamp.git bootcamp2
     Cloning into 'bootcamp2'...
 
 
@@ -127,7 +127,7 @@ So we now have two clones of our repository,
 
 Let's pretend these clones are on two separate machines! So we have 3 versions of our repository - our two local versions, on our separate machines (we're still pretending!) and one on GitHub. So let's go into one of our clones, make some changes, commit these and push these to GitHub:
 
-    $ cd bootcamp-WiSE
+    $ cd bootcamp
     $ nano add_numb.py
     $ git add add_numb.py
     $ git commit -m "Added some more comments" add_numb.py
@@ -160,7 +160,7 @@ As a short-hand, we can do a Git *pull* which does a *fetch* then a *merge*,
     $ git commit -m "Added credits" add_numb.py
     $ git push
     $ cd ..
-    $ cd ../bootcamp-WiSE
+    $ cd ../bootcamp
     $ git pull
 
 And then check that we have our changes,
@@ -199,7 +199,7 @@ As we saw earlier, with the fetch and merge, a pull pulls down changes from the 
 
     $ git status
 
-we can see that our file is listed as `Unmerged` and if we look at `journal.txt`, we may see something like,
+we can see that our file is listed as `Unmerged` and if we look at `add_numb.py`, we may see something like,
 
     <<<<<<< HEAD 
     """ This short program just adds numbers. Developed by John and Aleksandra."""
