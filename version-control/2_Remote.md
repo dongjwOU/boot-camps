@@ -179,7 +179,6 @@ Let's continue to pretend that our two local, cloned, repositories are hosted on
 
 Now let us suppose, at a later, date, we use our other repository and we want to change the credits.
 
-
     $ cd ../bootcamp2
     $ nano add_numb.py
     $ git add add_numb.py
@@ -190,7 +189,7 @@ Our push fails, as we've not yet pulled down our changes from our remote reposit
 
     $ git pull
 
-and we get
+and we get:
 
     Auto-merging add_numb.py
     CONFLICT (content): Merge conflict in add_numb.py
@@ -223,14 +222,16 @@ This is where version control proves itself better than DropBox or GoogleDrive, 
     $ git checkout -b feature2
 
 To push that branch to the remote repository:
+
    $ git push origin feature2
 
 To list all branches (local and remote):
+
     $ git branch -a
 
 To delete the remote branch:
-    $ git push origin :feature2 
 
+    $ git push origin :feature2 
 
 
 ## The story so far...
