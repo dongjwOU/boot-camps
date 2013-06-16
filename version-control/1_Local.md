@@ -418,8 +418,8 @@ Git cannot complete the merge because there is a conflict - if you recall our ad
     #
 
 To resolve the conflicts we need to edit the add_numb.py:
+
     """ This short program just adds numbers. """
-    
     <<<<<<< HEAD
     def add_two(a,b):
         print('I'm just about to add two numbers')
@@ -427,22 +427,22 @@ To resolve the conflicts we need to edit the add_numb.py:
     =======
      from adding import add_three, add_two
     >>>>>>> feature1
-
     def main():
         print ("2 + 3 = ",add_two(2,3))
         print ("2 + 3 + 4 = ",add_three(2,3,4))
-
     if __name__ == "__main__":
             main()
 
-The markers <<<<<<< and ======= show us where the conflict has occured (i.e. show different contents from each of the file versions). Since we want to use our feature we'll delete the part marked to be HEAD.
+The markers <<<<<<< and ======= show us where the conflict has occured (i.e. show different contents from each of the file versions). Since we want to use our feature we will delete the part marked to be HEAD.
 Now we need to let Git know that we resolved out conflict by adding the file to the staging area and making a commit ('git commit -a' will also work but 'git commit' will return an error).
+
     $ git commit -am 'Resolved conflicts'
     [master 99aae93] Resolved conflicts
 
 Now we have our feature in our master branch.
 
 Our feature1 branch still exists and we could keep on working with it. But let's suppose we actually would prefer to delete it. 
+
     $ git branch -d feature1
     Deleted branch feature1 (was 2bce0f2).
 
