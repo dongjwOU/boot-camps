@@ -383,22 +383,25 @@ Git is very powerful and comes with countless number of commands. For example, i
     $ git show-branch
     * [feature1] Moved add_two to the module
     ! [master] Added files
-  --
+    --
     *  [feature1] Moved add_two to the module
     *  [feature1^] Adding module with functions
     *+ [master] Added files
 
 Let's change the add_two function by adding a printing statement and commit our changes (remember: we're working now in the master branch!).
 Now let's switch back to feature1 and move now our add_two function to the module and commit the changes. Looks like our feature is ready to be merged. To do that we need to switch to the master branch:
-    $ git checkout master
+
+      $ git checkout master
 
 Now merging:
+
     $ git merge feature1
     Auto-merging add_numb.py
     CONFLICT (content): Merge conflict in add_numb.py
     Automatic merge failed; fix conflicts and then commit the result.
 
 Git cannot complete the merge because there is a conflict - if you recall our add_numb.py is different in our master branch and feature1 branch. We have to resolve the conflict and then complete the merge. Let's see a bit more details:
+
     $ git status
     # On branch master
     # You have unmerged paths.
