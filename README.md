@@ -1,4 +1,4 @@
-Software Carpentry Boot Camp - Oklahoma University July 2013
+Software Carpentry Boot Camp - University of Oklahoma, July 2013
 =================================
 
 ![SWC logo](http://software-carpentry.org/img/software-carpentry-banner.png)
