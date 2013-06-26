@@ -6,7 +6,7 @@ Please read carefully the instructions below which will tell you what you need t
 
 To complete the entire workshop you need several things:   
 * a Bash shell,   
-* [Git]http://git-scm.com/),   
+* [Git](http://git-scm.com/),   
 * a code editor (though any plain text editor will work in a pinch),   
 * Python 2.7 or higher and [IPython](http://ipython.org/install.html) 0.13 or higher,   
 * a scientific Python installation that includes the IPython Notebook, [NumPy](http://numpy.scipy.org/), [SciPy](http://scipy.org) and [matplotlib](ttp://matplotlib.org/); we recommend that you use [Anaconda]((http://continuum.io/downloads.html)) - as explained below,      
