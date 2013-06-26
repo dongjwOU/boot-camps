@@ -5,6 +5,8 @@ Software Carpentry Boot Camp - University of Oklahoma, July 2013
 
 This repository contains materials for the OU SWC workshop in July 2013. 
 
+Before you arrive, please check the [setup](setup) instructions.
+
 [contrib]: https://github.com/swcarpentry/boot-camps/blob/master/CONTRIBUTING.md
 [wiki]: https://github.com/swcarpentry/boot-camps/wiki
 
@@ -12,23 +14,23 @@ Preliminary schedule:
 
 ###Day 1 - 1st July 2013
 
-**09:00 -  09:30**  Setup Help  
+**09:00 -  09:30** [Setup](setup) Help  
 **09:30 - 10:00** Introduction  
-**10:00 - 11:00** Unix Shell (Paul?)  
+**10:00 - 11:00** [Unix Shell](shell)(Paul)  
 **11:00 - 11:15** Break  
-**11:15 - 12:00** Unix Shell - continued (Paul?)   
+**11:15 - 12:00** [Unix Shell](shell) - continued (Paul)   
 **12:00 - 13:00** Lunch   
-**13:00 - 15:00** Version control with Git (Aleksandra)  
+**13:00 - 15:00** [Version control with Git](version-control)(Aleksandra)  
 **15:00 - 15:15** Break  
-**15:15 - 17:00** Introduction to programming with Python (Aleksandra)  
+**15:15 - 17:00** [Introduction to programming with Python](python)(Aleksandra)  
 
 ###Day 2 - 2nd July 2013
 
-**09:00 - 11:00**  Scientific computing in Python / Programming with Python (Paul)  
+**09:00 - 11:00** [More programming with Python](python)(Paul)  
 **11:00 - 11:15** Break  
-**11:15 - 12:30** Software testing (Aleksandra)  
+**11:15 - 12:30** [Software testing](testing) (Aleksandra)  
 **12:30 - 13:30** Lunch  
-**13:30 - 15:30** More scientific computing in Python/Other (Paul?)  
+**13:30 - 15:30** Scientific computing in Python (Paul)  
 **15:30 - 15:45** Break  
 **15:45 - 16:00** Wrap up & feedback
 
