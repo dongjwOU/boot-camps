@@ -31,8 +31,9 @@ What are helpers for? Well, they're here to *help*!
 - 3-4 hands-on sessions per day
 - 2 coffee breaks/day
 
-Coffee breaks will be useful for asking questions and making comments
-In particular, please use [this etherpad](https://etherpad.mozilla.org/swc-ou) to make comments and ask questions as we go along.
+Our breaks will be useful for asking questions and making comments
+In particular, please use [this etherpad](https://etherpad.mozilla.org/swc-ou)
+to make comments and ask questions as we go along.
 
 We will have structured moments throughout the day to go over these questions
 - 1 lunch break/day
@@ -41,7 +42,9 @@ We will have structured moments throughout the day to go over these questions
 
 # Day 1 - the basics
 
-- The unix shell : the unix shell is a powerful tool for interacting with the contents of your computer. In the shell, atomic operations are strung together to automate routine operations
+- The unix shell : the unix shell is a powerful tool for interacting with the
+  contents of your computer. In the shell, atomic operations are strung together
+  to automate routine operations
 
 *"This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface."* -- Doug Mcllroy (via [Wikipedia](http://en.wikipedia.org/wiki/Unix_philosophy))
 
@@ -53,9 +56,7 @@ We will have structured moments throughout the day to go over these questions
 
 - Scientific computing in python : We will introduce the numpy library for array computations and the scipy library for performing scientific computations. Matplotlib will be introduced as a way of visualizing data.
 
-- Software validation and testing : before we go on to more advanced data exploration and visualization, we will take a moment to teach you how to verify that your software works. We will use automated testing using the nose library. Test-driven development will be introduced as a way of thinking about writing code.
-
-- Data exploration and analysis: with all the tools at our disposal, we will now attack a scientific question with some data from neuroscience experiments. We will demonstrate how you would build a reproducible work-flow for your computational analysis. 
+- Software validation and testing : we will take a moment to teach you how to verify that your software works. We will use automated testing using the nose library. Test-driven development will be introduced as a way of thinking about writing code.
 
 ## Questions?
 
