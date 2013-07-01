@@ -19,10 +19,10 @@ Preliminary schedule:
 **10:00 - 11:00** [Unix Shell](shell)(Paul)  
 **11:00 - 11:15** Break  
 **11:15 - 12:00** [Unix Shell](shell) - continued (Paul)   
-**12:00 - 13:00** Lunch   
-**13:00 - 15:00** [Version control with Git](version-control)(Aleksandra)  
-**15:00 - 15:15** Break  
-**15:15 - 17:00** [Introduction to programming with Python](python)(Aleksandra)  
+**12:00 - 13:15** Lunch   
+**13:15 - 15:15** [Version control with Git](version-control)(Aleksandra)  
+**15:15 - 15:30** Break  
+**15:30 - 17:00** [Introduction to programming with Python](python)(Aleksandra)  
 
 ###Day 2 - 2nd July 2013
 
