@@ -56,6 +56,17 @@ These commands will grab all of the data needed for this workshop from the
 internet. (We will talk about the `git` command later in the workshop.)
 
 
+# Following along today
+
+Unless technical difficulties prevent us from doing so, I will be "broadcasting"
+my shell window at this url:
+
+http://pirsquared.org/live
+
+which should redirect you to my Desktop machine in Berkeley:
+
+http://128.32.158.203:3141/
+
 # Let's get started
 
 One very basic command is `echo`. This command just prints text to
