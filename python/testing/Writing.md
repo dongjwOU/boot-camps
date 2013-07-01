@@ -25,20 +25,12 @@ The `except` block provides a mechanism for handling exceptions which may be rai
     except:
     ....
 
-If we didn't use the `except` block, a `ZeroDivisionError` would be raised and the program would terminate. But since we specified what to do in such case (`print divide_it(4,2)`) and return `None`, the program will carry on  its execution (if there were any further instructions to be exectuted). We used a generic `except` block, that is, it will handle any exception raised (for example, TypeError, if we provide anything else than a number as an argument). It is a good practice to be more specific and handle different type of errors which may be raised in a relevant way. Let's modify our function a little bit:
+If we didn't use the `except` block, a `ZeroDivisionError` would be raised and the program would terminate. But since we specified what to do in such case (`print ' Divide by zero!' ` and areturn `None`), the program will carry on  its execution (if there were any further instructions to be exectuted). We used a generic `except` block, that is, it will handle any exception raised.
 
-    def divide_it(x, y):
-        try:
-            out = x / y
-        except ZeroDivisionError:
-            print '   Divide by zero!'
-            out = None
-        except TypeError:
-            print ' Provide a number!'
-            out = None    
-        return out
+__Exercise__   
+ It is a good practice to be more specific and handle different type of errors which may be raised in a relevant way. How could we modify our function so that when we call `divide_it('a','b')` it displays with a different custom message (eg. "Provide a number")?
 
-
+ 
 Now, the exception is *caught* by the `except` block. This is a *runtime test*. It alerts the user to exceptional behavior in the code. Often, exceptions are related to functions that depend on input that is unknown at compile time. Such tests make our code robust and allows our code to behave gracefully - they anticipate problematic values and handle them.
 
 Often, we want to pass such errors to other points in our program rather than just print a message and continue. So, for example we could do,
@@ -46,14 +38,23 @@ Often, we want to pass such errors to other points in our program rather than ju
     except TypeError:
         raise ValueError('The input is not a sequence e.g. a string or list')
 
-which raises a new exception, with a more meaningful message. If writing a complex application, our user interface could then present this to the user e.g. as a dialog box.
+which raises a new exception (`ValueError`), with a more meaningful message. If writing a complex application, our user interface could then present this to the user e.g. as a dialog box.
 
-Runtime tests don't test our functions behaviour or whether it's implemented correctly. So, we can add some tests,
+Runtime tests don't test our functions behaviour or whether it's implemented correctly. So, we can add some tests using a print statement:
+
+    def divide_it(x, y):
+       try:
+           out = x / y
+       except:
+           print '   Divide by zero!'
+           out = None
+       return out
+
 
     print "4 divided by 2 is ", divide_it(4,2)
     print "6 divided by 3 is ", divide_it(6,3)
 
-But we'd have to visually inspect the results to see they are as expected. So, let's have the computer do that for us and make our lives easier, and save us time in checking,
+But we'd have to visually inspect the results to see they are as expected. So, let's have the computer do that for us and make our lives easier, and save us time in checking. We can use a Python statement `assert`: 
 
     assert divide_it(4,2) == 2
     assert divide_it(6,3) == 2
@@ -69,13 +70,15 @@ But we'd have to visually inspect the results to see they are as expected. So, l
         "Fact-brication test"
         assert False == 0
 
-We explicitly list the expected result in each statement. But, by doing this there is a risk that we mistype one. A good design principle is to define constant values in one place only. We could create a dictionary with the results:
+We explicitly list the expected result in each statement. But, by doing this there is a risk that we mistype one. A good design principle is to define constant values in one place only. 
+
+For example, for testing our function `divide_it(x,y)` we could create a dictionary with the results:
 
     DIVISION_RESULTS = {'4/2':, 2, '6/3': 2, '10/2': 5}
 
 Now we can just refer to that,
 
-    aassert divide_it(4,2) ==  DIVISION_RESULTS['4/2']
+    assert divide_it(4,2) ==  DIVISION_RESULTS['4/2']
     assert divide_it(6,3) == DIVISION_RESULTS['6/3']
     assert divide_it(10,2) == DIVISION_RESULTS['10/2']
     
@@ -132,10 +135,7 @@ We could add a custom message which will inform us that what type was entered in
         assert val_type == type(""), "Given a %s" % (str(val_type))
         print ">" + val + "< length:", len(val)
         
-Python `assert` also allows us to check:
 
-    assert should_be_true()
-    assert not should_not_be_true()
 
 ## `nose` - a Python test framework
 
@@ -151,14 +151,7 @@ Each `.` corresponds to a successful test. And to prove `nose` is finding our te
 
     $ nosetests test_divide_it.py
 
-nosetests can output an "xUnit" test report,
-
-    $ nosetests --with-xunit test_divide_it.py
-    $ cat nosetests.xml
-
-This is a standard format that that is supported by a number of xUnit frameworks which can then be converted to HTML and presented online. 
-
-`nose` defines additional functions which can be used to check for a rich range of conditions e.g..
+`nose` defines additional functions which can be used to check for a rich range of conditions, for example `assert_equal`, `assert_true` or `assert_false`:
 
     $ python
     >>> from nose.tools import *
@@ -166,8 +159,9 @@ This is a standard format that that is supported by a number of xUnit frameworks
     >>> expected = 123
     >>> actual = 123
     >>> assert_equal(expected, actual)
-    >>> actual = 456
+    >>> actual = 456   
     >>> assert_equal(expected, actual)
+    
     >>> expected = "GATTACCA"
     >>> actual = ["GATC", "GATTACCA"]
     >>> assert_true(expected in actual)
@@ -183,6 +177,9 @@ We can also use `assert_raises` :
 
 `assert raises` is used for where we want to test that an exception is raised, if for example, we give a function a bad input. 
 
+   
+
+
 ## Write some more tests
 
 Let's spend a few minutes coming up with some more tests for `divide_it`. Consider,
@@ -195,13 +192,27 @@ For example, we could add a test to deal with:
 
     divide_it('a','b) 
 
-It requires us to check whether an exception was raised which we can do as follows:
+It requires us to check whether an exception was raised. Let's rewrite our function again:
 
-    try:
-        divide_it('a','b') 
-        assert False
-    except TypeError:
-        assert True
+    def divide_it(x, y):
+        try:
+            out = x / y
+        except ZeroDivisionError:
+            print '   Divide by zero!'
+            out = None
+        except:
+    	    raise TypeError (' Provide a number!')
+            out = None    
+       return out
+       
+ And now we can write a test which checks if the fuction actually raises the error:
+ 
+    def test_divide_it_ab():
+        try:
+            divide_it('a','b') 
+            assert False
+        except TypeError:
+            assert True
         
 This is like catching a runtime error. If an exception is raised then our test passes (`assert True`), else if no exception is raised, it fails. Alternatively, we can use `assert_raises` from `nose.tools`,
 
@@ -212,66 +223,5 @@ This is like catching a runtime error. If an exception is raised then our test p
 
 The assert fails if the named exception is *not* raised. If the function raises the right error, then the test passes. We're  we're checking (testing) the behaviour of the function. We're trying to 'force' the function to raise the 'correct' error and see if it really does that.
 
-Let's look at another example of using `nose` - this time with a Python class (see file [nose_example1.py](python-code/example1/nose_example1.py)):
-
-    class Transmogrifier:
-        def transmogrify(self, person):
-            transmog = {'calvin':'tiger','hobbes':'chicken'}
-            new_person = transmog[person]
-            return new_person
-
-    def test_transmogrify():
-        TM = Transmogrifier()
-        for p in ['Calvin', 'Hobbes']:
-            assert TM.transmogrify(p) != None
-
-    def main():
-        TM = Transmogrifier()
-        for p in ['calvin', 'Hobbes']:
-            print p, '->  ZAP!  ->', TM.transmogrify(p)
-
-    if __name__ == '__main__':
-       main()
-
-If we run ` the above code, we'll get an error:
-
-    ERROR: nose_example1.test_transmogrify
-     ----------------------------------------------------------------------
-    Traceback (most recent call last):
-     File "/Library/Python/2.7/site-packages/nose-1.3.0-py2.7.egg/nose/case.py", line 197, in runTest
-    self.test(*self.arg)
-    File "/Users/aleksandra/Software-Carpentry/Testing-materials/12_Testing/example1/nose_example1.py", line 19, in test_transmogrify
-    assert TM.transmogrify(p) != None
-    File "/Users/aleksandra/Software-Carpentry/Testing-materials/12_Testing/example1/nose_example1.py", line 12, in transmogrify
-    new_person = transmog[person]
-    KeyError: 'Calvin'
-
-     ----------------------------------------------------------------------
-    Ran 1 test in 0.001s
-
-    FAILED (errors=1)
-
-We need to fix our code (so that transmogrification of a person is case insensitive `new_person = transmog[person.lower()]`):
-
-    class Transmogrifier:
-        def transmogrify(self, person):
-            transmog = {'calvin':'tiger','hobbes':'chicken'}
-            new_person = transmog[person.lower()]
-            return new_person
-
-    def test_transmogrify():
-        TM = Transmogrifier()
-        for p in ['Calvin', 'Hobbes']:
-            assert TM.transmogrify(p) != None
-
-    def main():
-        TM = Transmogrifier()
-        for p in ['calvin', 'Hobbes']:
-            print p, '->  ZAP!  ->', TM.transmogrify(p)
-
-    if __name__ == '__main__':
-       main()
- 
-And it works! 
 
 Previous: [Testing](README.md) Next: [Testing in practice](RealWorld.md)
