@@ -1,6 +1,6 @@
 Software Carpentry Python Workshop.
 
-**Stanford, May 6-7th**
+**University of Oklahoma, July 1st and 2nd**
 
 
 # The Shell
@@ -17,7 +17,7 @@ The shell is/has
 * allows to combine tools in powerful way
 	* philosophy is to write small junks of code that do one job, and one job only
 	* then combine in greater scripts
-* allows to repeate reliably and reproducibly (unlike with the mouse)
+* allows to repeat reliably and reproducibly (unlike with the mouse)
 
 
 
@@ -61,7 +61,7 @@ to create working directory for today. No news is good news - sometimes.
 * tab completion!
 * arrow up for previous commands
 * q to exit
-* crtl + C to *kill*
+* ctrl + C to *interrupt*
 
 
 ## Data

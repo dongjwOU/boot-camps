@@ -10,7 +10,7 @@ with a keyboard instead of controlling graphical user interfaces
 (GUIs) with a mouse/keyboard combination.
 
 Use a browser to open the tutorial on github, located at:
-    https://github.com/USERNAME/boot-camps/tree/YYYY-MM-PLACE
+    https://github.com/ivanov/boot-camps/tree/2013-07-OU
 
 Click on the directory named `shell`.
 
@@ -50,12 +50,12 @@ by manipulating some experimental data from a hearing test. To get
 the data for this test, you will need internet access. Just enter the
 command:
 
-    git clone -b YYYY-MM-PLACE https://github.com/USERNAME/boot-camps.git
+    git clone -b 2013-07-OU https://github.com/ivanov/boot-camps.git
 
 Followed by:
 
     cd boot-camps
-    git checkout YYYY-MM-PLACE
+    git checkout 2013-07-OU
 
 These 2 commands will grab all of the data needed for this workshop from the
 internet.
