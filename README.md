@@ -28,7 +28,7 @@ Preliminary schedule:
 
 **09:00 - 11:00** [More programming with Python](python)(Paul)  
 **11:00 - 11:15** Break  
-**11:15 - 12:30** [Software testing](testing) (Aleksandra)  
+**11:15 - 12:30** [Software testing](python/testing) (Aleksandra)  
 **12:30 - 13:30** Lunch  
 **13:30 - 15:30** Scientific computing in Python (Paul)  
 **15:30 - 15:45** Break  
