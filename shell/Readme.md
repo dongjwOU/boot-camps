@@ -52,13 +52,9 @@ command:
 
     git clone -b 2013-07-OU https://github.com/ivanov/boot-camps.git
 
-Followed by:
+These commands will grab all of the data needed for this workshop from the
+internet. (We will talk about the `git` command later in the workshop.)
 
-    cd boot-camps
-    git checkout 2013-07-OU
-
-These 2 commands will grab all of the data needed for this workshop from the
-internet.
 
 # Let's get started
 
@@ -178,6 +174,18 @@ which we will use later this session. No one can possibly learn all of
 these arguments, of course. So you will probably find yourself
 referring back to the manual page frequently.
 
+**Short Exercise**
+
+1. Use the manual page for `ls` to guess what you would expect from
+using the arguments `-l`, '-t', '-r' at the same time.
+2. Try the following and see if you can figure out what they do, either by examining the results or consulting the ma
+   * `ls -lS` (equivalent to `ls -l -S`)
+   * `ls -lt` (equivalent to `ls -l -t`)
+   * `ls -1`  (that's the number one, not a letter 'ell')
+
+* * * *
+
+
 **Examining the contents of other directories**
 
 By default, the `ls` commands lists the contents of the working
@@ -238,6 +246,13 @@ not. You can usually use either a full path or a relative path
 depending on what is most convenient. If we are in the home directory,
 it is more convenient to just enter the relative path since it
 involves less typing.
+
+* * * *
+**Short Exercise**
+
+Over time, it will become easier for you to keep a mental note of the
+structure of the directories that you are using hand how to quickly
+navigate amongst them
 
 Now, list the contents of the /bin directory. Do you see anything
 familiar in there?
@@ -397,6 +412,34 @@ The down arrow takes your forwards in the command history.
 ^-R will do a reverse-search through your command history.  This
 is very useful.
 
+You can also review your recent commands with the `history` command.  Just enter:
+
+    history
+
+to see a numbered list of recent commands, including this just issues
+`history` command.  You can reuse one of these commands directly by
+referring to the number of that command.
+
+If your history looked like this:
+
+    259  ls *!
+    260  ls /usr/bin/*.sh
+    261  ls *4*1
+
+then you could repeat command #260 by simply entering:
+
+    !260
+
+(that's an exclamation mark).
+
+* * * *
+**Short Exercise**
+
+1. Find the line number in your history for the last exercise (listing
+files in /bin) and reissue that command.
+
+* * * *
+
 ## Which program? ##
 
 Commands like `ls`, `rm`, `echo`, and `cd` are just ordinary programs
@@ -495,9 +538,22 @@ case. Enter the following command:
     less ~/boot-camps/shell/dictionary.txt
 
 `less` opens the file, and lets you navigate through it. The commands
-are identical to the `man` program. Use "space" to go forward and hit
-the "b" key to go backwards. The "g" key goes to the beginning of the
-file and "G" goes to the end. Finally, hit "q" to quit.
+are identical to the `man` program. 
+
+
+**Some commands in `less`**
+
+| key     | action |
+| ------- | ---------- |
+| "space" | to go forward |
+|  "b"    | to go backwards |
+|  "g"    | to go to the beginning |
+|  "G"    | to go to the end |
+|  "q"    | to quit |
+
+
+Use "space" to go forward and hit the "b" key to go backwards. The "g" key goes
+to the beginning of the file and "G" goes to the end. Finally, hit "q" to quit.
 
 `less` also gives you a way of searching through files. Just hit the
 "/" key to begin a search. Enter the name of the word you would like
@@ -509,8 +565,9 @@ works its way forward. If you are at the end of the file and search
 for the word "cat", `less` will not find it. You need to go to the
 beginning of the file and search.
 
-Remember, the `man` program uses the same commands, so you can search
-documentation using "/" as well!
+Remember, the `man` program actually uses `less` internally and
+therefore uses the same commands, so you can search documentation
+using "/" as well
 
 * * * *
 **Short Exercise**
