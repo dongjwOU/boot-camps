@@ -25,7 +25,7 @@ The `except` block provides a mechanism for handling exceptions which may be rai
     except:
     ....
 
-If we didn't use the `except` block, a `ZeroDivisionError` would be raised and the program would terminate. But since we specified what to do in such case (`print ' Divide by zero!' ` and areturn `None`), the program will carry on  its execution (if there were any further instructions to be exectuted). We used a generic `except` block, that is, it will handle any exception raised.
+If we didn't use the `except` block, a `ZeroDivisionError` would be raised and the program would terminate. But since we specified what to do in such case (`print ' Divide by zero!' ` and return `None`), the program will carry on  its execution (if there were any further instructions to be exectuted). We used a generic `except` block, that is, it will handle any exception raised.
 
 __Exercise__   
  It is a good practice to be more specific and handle different type of errors which may be raised in a relevant way. How could we modify our function so that when we call `divide_it('a','b')` it displays with a different custom message (eg. "Provide a number")?
