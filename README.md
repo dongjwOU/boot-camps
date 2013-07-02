@@ -26,7 +26,7 @@ Preliminary schedule:
 
 ###Day 2 - 2nd July 2013
 
-**09:00 - 11:00** [More programming with Python](python)(Paul)  
+**09:00 - 11:00** [More programming with Python](python)(Aleksandra & Paul)  
 **11:00 - 11:15** Break  
 **11:15 - 12:30** [Software testing](python/testing) (Aleksandra)  
 **12:30 - 13:30** Lunch  
